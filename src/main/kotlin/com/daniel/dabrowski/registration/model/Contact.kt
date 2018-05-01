@@ -4,5 +4,4 @@ class Contact (
     val city: String,
     val country: String,
     val telephone: Long,
-    val adress: String){
-}
+    val adress: String)
