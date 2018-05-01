@@ -21,7 +21,7 @@ Lightweight logging framework for Kotlin
 
     https://github.com/MicroUtils/kotlin-logging
     
-### Maven
+##### Maven:
 ```xml
 <dependency>
   <groupId>io.github.microutils</groupId>

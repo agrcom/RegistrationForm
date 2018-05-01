@@ -16,8 +16,6 @@ import java.time.LocalDateTime
 @RestController
 class UserController(val repo: UserRepository) {
 
-    //var mongoOps: MongoOperations = MongoTemplate(SimpleMongoDbFactory(MongoClient(), "local"))
-
     @GetMapping("/")
     fun homeEndpoint(): String {
         return "Hello!\n" +
@@ -28,12 +26,8 @@ class UserController(val repo: UserRepository) {
     fun demoEndpoint(@RequestParam(value = "name", defaultValue = "World") name: String,
                      @RequestParam(value = "email", defaultValue = "test@mail.com") email: String): User {
 
-        val usr = User("$name", "$email",
+        return User("$name", "$email",
                 Contact("city", "country", 555555, "address"))
-
-        repo.save(usr)
-
-        return usr
     }
 
     @GetMapping("/city/{city}")
@@ -45,13 +39,14 @@ class UserController(val repo: UserRepository) {
             = repo.findByName(name)
 
     @PostMapping("/newUser")
-    fun addUser(@RequestParam user: User): UserDbModel {
-        return UserDbModel(
+    fun addUser(@RequestParam user: User) {
+
+        repo.save(UserDbModel(
                 creationTime = LocalDateTime.now(),
                 name = user.name,
                 email = user.email,
                 contact = user.contact
-        )
+        ))
 
     }
 }

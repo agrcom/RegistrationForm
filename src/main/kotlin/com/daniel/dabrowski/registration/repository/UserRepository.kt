@@ -1,16 +1,17 @@
 package com.daniel.dabrowski.registration.repository
 
 import com.daniel.dabrowski.registration.model.User
+import com.daniel.dabrowski.registration.model.UserDbModel
 import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.data.mongodb.repository.Query
 
-interface UserRepository:MongoRepository<User, String> {
+interface UserRepository:MongoRepository<UserDbModel, String> {
 
-    fun findByName(name: String): List<User>
+    fun findByName(name: String): List<UserDbModel>
 
     @Query("{'contact.city': ?0}")
-    fun findByCity(city: String): List<User>
+    fun findByCity(city: String): List<UserDbModel>
 
     @Query("{'contact.telephone': ?0}")
-    fun findByTelephone(address: Long): List<User>
+    fun findByTelephone(telephone: Long): List<UserDbModel>
 }
