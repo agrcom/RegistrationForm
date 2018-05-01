@@ -4,13 +4,7 @@ import com.daniel.dabrowski.registration.model.Contact
 import com.daniel.dabrowski.registration.model.User
 import com.daniel.dabrowski.registration.model.UserDbModel
 import com.daniel.dabrowski.registration.repository.UserRepository
-import com.mongodb.MongoClient
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.data.mongodb.core.MongoOperations
-import org.springframework.data.mongodb.core.MongoTemplate
-import org.springframework.data.mongodb.core.SimpleMongoDbFactory
 import org.springframework.web.bind.annotation.*
-import java.time.Instant
 import java.time.LocalDateTime
 
 @RestController
