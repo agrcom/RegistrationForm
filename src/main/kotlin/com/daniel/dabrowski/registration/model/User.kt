@@ -1,4 +1,4 @@
-package com.daniel.dabrowski.registration
+package com.daniel.dabrowski.registration.model
 
 import org.springframework.data.mongodb.core.mapping.Document
 

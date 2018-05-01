@@ -1,0 +1,19 @@
+version: '2.1'
+services:
+    registration.form:
+        image: agrcom/registration.form
+        ports:
+            - "8080:8080"
+    kotlin-mongo:
+        image: mongo:3.6
+        container_name: "RegistratonDB"
+        ports:
+            - '27017:27017'
+#        environment:
+#          - MONGO_DATA_DIR=/data/db
+#          - MONGO_LOG_DIR=/dev/null
+#        volumes:
+ #         - ./data/db:/data/db
+        ports:
+            - "27017:27017"
+#        command: mongod --smallfiles --logpath=/dev/null # --quiet

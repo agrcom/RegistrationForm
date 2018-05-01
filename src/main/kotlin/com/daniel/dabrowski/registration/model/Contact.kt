@@ -1,4 +1,4 @@
-package com.daniel.dabrowski.registration
+package com.daniel.dabrowski.registration.model
 
 class Contact (
     val city: String,
