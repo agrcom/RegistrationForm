@@ -5,7 +5,7 @@ import java.time.LocalDateTime
 
 @Document(collection = "user")
 class UserDbModel(val creationTime: LocalDateTime,
-                  val name: String,
+                  val firstName: String,
                   val email: String,
                   val contact: Contact) {
 }

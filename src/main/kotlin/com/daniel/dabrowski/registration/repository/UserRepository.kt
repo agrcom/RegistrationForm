@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.Query
 
 interface UserRepository : MongoRepository<UserDbModel, String> {
 
-    fun findByName(name: String): List<UserDbModel>
+    fun findByFirstName(firstName: String): List<UserDbModel>
 
     @Query("{'contact.city': ?0}")
     fun findByCity(city: String): List<UserDbModel>

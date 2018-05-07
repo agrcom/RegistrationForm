@@ -10,6 +10,10 @@ run app:
     
     docker run -p 8080:8080 -t agrcom/registration.form
     
+run DB
+
+    http://mydevgeek.com/angular-4-crud-application-with-spring-boot-rest-service-part-2/
+    
 ## Swagger
 
 Now you can test it in your browser by visiting 
@@ -29,3 +33,15 @@ Lightweight logging framework for Kotlin
   <version>1.4.9</version>
 </dependency>
 ```
+
+
+# Client
+
+### Angular
+
+ng serve
+
+Client side and integration strngly inspired by articles:
+
+    https://mydevgeek.com/angular-4-crud-application-with-spring-boot-rest-service-part-1/
+    https://mydevgeek.com/angular-4-crud-application-with-spring-boot-rest-service-part-2/
